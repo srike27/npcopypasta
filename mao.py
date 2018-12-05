@@ -41,13 +41,17 @@ np.linspace(1,5,10)
 print a.reshape(9,1)
 #must be compatible args
 print a.ravel()
-#flattens multidim array into 1d array doesnt
+#flattens multidim array into 1d array
 
 #MATHS
 
-print a.min() #gives minimum
+print A.min() # gives minimum in entire array
 
-print a.max() #gives maximum
+print A.max() # gives maximum in entire array
+
+print A.min(axis = 0) #returns minimum along columns as an array
+
+print a.max(axis = 1) #returns maximum along rows as an array
 
 print a.sum() #gives sum of all elements
 
@@ -61,9 +65,9 @@ print a.dot(A) #matrix multiplication of the two arrays
 
 af = a.ravel()
 
-aft = A.T #transposes and stores in same dimension to be careful
+aft = A.T #transposes and stores in same dimension !!!!!to be careful!!!!
 
-#use reshape with altered dims for original transpose
+# for vectors flatten and reshape to 1,n to obtain proper transpose
 
 print af
 print aft
